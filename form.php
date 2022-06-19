@@ -10,6 +10,7 @@ $errorMessage="";
 $successMessage="";
 
 if(isset($_POST['btnsignup'])){
+  if(isset($_POST['confirmPass'])){
     $fname=trim($_POST['fname']);
     $lname=trim($_POST['lname']);
     $email=trim($_POST['email']);
@@ -46,6 +47,7 @@ if(isset($_POST['btnsignup'])){
             $isvalid=false;
             $errorMessage="Email.Id is already existed.";
         }
+    }
     }
 
     //database -> insert records
